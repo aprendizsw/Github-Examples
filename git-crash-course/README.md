@@ -30,6 +30,37 @@ mkdir /workspace/tmp
 cd /workspace/tmp
 ```
 
+> You'll need to generate a Personal Access Token (PAT)
+> https://github.com/settings/token
+> You will use the PAT as your password when you login
+> - Give it access to Contents for Commits
+
+### SSH
+
+```ssh
+git clone git@github.com:aprendizsw/Github-Examples.git
+cd GitHub-Examples
+```
+
+We will need to create our own SSH rsa key pair
+
+```
+ssh-keygen -t rsa
+```
+
+For WSL users and if you create a non default key you might need to add it
+
+```sh
+eval `ssh-agent`
+ssh-add /home/user/.ssh/alt-github_id_rsa
+```
+
+We can test our connection here:
+
+```
+ssh -T git@github.com
+```
+
 ### HTTPS
 
 ```sh
