@@ -85,7 +85,22 @@ git config --global core.editor emacs
 
 ## Remotes
 
+We can add remote but often you will just add remote via upstream when adding a branch
+
+```sh
+git remote add ...
+git branch -u origin new-feature
+```
+
 ## Stashing
+
+```
+git stash list
+git stash
+git stash save my-name
+git stash apply
+git stash pop
+```
 
 ## Add
 
@@ -99,6 +114,10 @@ git add .
 
 ## Merging
 
+```
+git checkout dev
+git merge main
+```
 
 ## Reset
 
